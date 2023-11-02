@@ -52,3 +52,25 @@ def question(question_id):
         ]
     }
     return json.dumps(response, indent = 0)
+
+@app.route("/sections", methods=['GET'])
+def sections():
+    response = [
+        {"section_id":1, "section_name":"Stomatologia zachowawcza"},
+        {"section_id":2, "section_name":"Stomatologia dziecięca"},
+        {"section_id":3, "section_name":"Endodendo"}
+    ]
+    return json.dumps(response, indent = 0)
+
+@app.route("/exams", methods=['GET'])
+def exams():
+    response = [
+        {"exam_id":1, "exam_name":"LDEK-J-2005"},
+        {"exam_id":2, "exam_name":"LDEK-J-2006"},
+        {"exam_id":3, "exam_name":"LDEK-J-2007"},
+        {"exam_id":4, "exam_name":"LDEK-J-2008"},
+        {"exam_id":5, "exam_name":"LDEK-J-2009"},
+        {"exam_id":6, "exam_name":"LDEK-J-2010"},
+        {"exam_id":7, "exam_name":"LDEK-J-2011"}
+    ]
+    return json.dumps(response, indent = 0)
